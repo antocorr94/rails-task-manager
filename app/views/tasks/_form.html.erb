@@ -1,0 +1,16 @@
+<%= form_with(model: @task, url: task_path(@task), method: :patch) do |form| %>
+  <div style="margin-bottom: 10px;">
+    <p><%= form.label :title %></p>
+    <%= form.text_field :title, class: "my-form-control" %>
+  </div>
+  <div style="margin-bottom: 10px;">
+    <p><%= form.label :details %></p>
+    <%= form.text_area :details, class: "my-form-control" %>
+  </div>
+  <div style="my-checkbox">
+    <%= form.check_box :completed, class: "completed-label" %>
+    <%= form.label :completed, class: "completed-label" %>
+  </div>
+<%= form.submit "Submit", class: "my-submit-button" %>
+<% end %><br>
+<p><%= link_to "<< Back to Tasks List", tasks_path %></p>

@@ -1,0 +1,28 @@
+<h1>My tasks 📒</h1>
+  <% @tasks.each do |task| %>
+  <ul>
+  <li>
+    <%= check_box_tag "completed[]", task.id, task.completed, class: "task-checkbox" %>
+    <%= link_to task.title, task_path(task) %>
+    <i class="fa-solid fa-square-minus"></i>
+    </li>
+  </ul>
+  <% end %><br>
+<p><%= link_to "+ Add New Task", new_task_path %></p>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const taskCheckboxes = document.querySelectorAll(".task-checkbox");
+
+    taskCheckboxes.forEach(function(checkbox) {
+      checkbox.addEventListener("change", function(e) {
+        const taskId = e.target.value;
+        const indexCheckbox = document.querySelector(`input[data-task-id="${taskId}"]`);
+
+        if (indexCheckbox) {
+          indexCheckbox.checked = e.target.checked;
+        }
+      });
+    });
+  });
+</script>

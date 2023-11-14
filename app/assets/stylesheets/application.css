@@ -13,3 +13,75 @@
  *= require_tree .
  *= require_self
  */
+
+ h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #F05941;
+  font-size: 250%;
+  margin-bottom: 10px;
+ }
+
+ ul {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #441258;
+  font-size: 120%;
+  padding-left: 0%;
+  list-style-type: none
+ }
+
+ body {
+  background-color: #F4EAE0;
+ }
+
+ h2 {
+  color: #441258;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+  margin-bottom: 0px;
+ }
+
+ body {
+  margin-left: 50px;
+  margin-top: 25px;
+ }
+
+ p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #441258;
+  font-size: 100%;
+ }
+
+ a {
+  text-decoration: none;
+ }
+
+ a:hover {
+  text-decoration: underline;
+  color: #8a23b2;
+ }
+
+ .my-form-control {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.my-submit-button {
+  background-color: #F05941;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+textarea {
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.completed-label {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
